@@ -4,12 +4,24 @@ import itertools
 import matplotlib.pyplot as plt
 import numpy as np
 from sklearn.metrics import confusion_matrix
-
 import datetime
 
 import matplotlib.pyplot as plt
 
-
+def visualise_data(train_data = X_train,
+                   train_labels = y_train,
+                   test_data = X_test,
+                   test_labels = y_test):
+  """
+  Plot the data 
+  """
+  plt.figure(figsize=(8,5))
+  # training data in blue 
+  plt.scatter(X_train, y_train, c="b", label="Train")
+  # test data in green 
+  plt.scatter(X_test, y_test, c="g", label="Test")
+  # legend 
+  plt.legend();
 
 def mae(y_test, y_pred):
   """
