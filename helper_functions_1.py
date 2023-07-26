@@ -8,19 +8,19 @@ import datetime
 
 import matplotlib.pyplot as plt
 
-def visualise_data(train_data = X_train,
-                   train_labels = y_train,
-                   test_data = X_test,
-                   test_labels = y_test):
+def visualise_data(train_data ,
+                   train_labels ,
+                   test_data ,
+                   test_labels):
                      
   """
   Plot the data 
   """
   plt.figure(figsize=(8,5))
   # training data in blue 
-  plt.scatter(X_train, y_train, c="b", label="Train")
+  plt.scatter(train_data, train_labels, c="b", label="Train")
   # test data in green 
-  plt.scatter(X_test, y_test, c="g", label="Test")
+  plt.scatter(test_data, test_labels, c="g", label="Test")
   # legend 
   plt.legend();
 
@@ -40,11 +40,11 @@ def mse(y_test, y_pred):
 
 
 
-def plot_predictions(train_data = X_train,
-                     train_labels = y_train,
-                     test_data = X_test,
-                     test_labels = y_test,
-                     predictions = y_preds):
+def plot_predictions(train_data,
+                     train_labels,
+                     test_data ,
+                     test_labels,
+                     predictions):
   """
   Plots training data, test data and predictions
   """
