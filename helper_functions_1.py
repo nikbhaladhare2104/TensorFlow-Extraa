@@ -12,6 +12,7 @@ def visualise_data(train_data = X_train,
                    train_labels = y_train,
                    test_data = X_test,
                    test_labels = y_test):
+                     
   """
   Plot the data 
   """
