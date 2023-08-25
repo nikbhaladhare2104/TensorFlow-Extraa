@@ -464,6 +464,10 @@ def plot_predictions(train_data,
   plt.legend();
                        
 
+import tensorflow as tf
+from tensorflow.keras import layers
+from tensorflow.keras.models import Sequential
+
 
 def create_base_model(input_shape: tuple[int, int, int] = (224, 224, 3),
                       output_shape: int = 10,
